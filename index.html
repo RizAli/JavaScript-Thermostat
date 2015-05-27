@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thermostat</title>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8">
+
+</head>
+<body>
+  <p>Temperature: <span id="Current_temp"></span></p>
+
+  <div>
+    <input type="button" id="increaseTemp" value="Increase Temp"/>
+    <input type="button" onclick="decTemp()" value="Decrease Temp"/>
+    <input type="button" onclick="resetTemp()" value="Reset Temp">
+    <input type="button" onclick="PSModeOn()" value="PSMode ON">
+    <input type="button" onclick="PSModeOff()" value="PSMode Off">
+  </div>
+
+
+  <script src="src/thermostat.js"></script>
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="src/thermostatDisplay.js">
+    // $(document).ready(function() {
+    //   var thermostat = new Thermostat();
+    //   $('span#Current_temp').text(thermostat.temp());
+    //   $('#incButton').onclick(function(){
+
+    //   });
+    // })
+  </script>
+
+</body>
+</html>
