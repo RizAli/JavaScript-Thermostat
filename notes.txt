@@ -1,0 +1,7 @@
+API  - Application Programming Interface
+AJAX - asyncronous javascript xml
+JSON - JavaScript object notation
+
+
+Absolute units:
+pixel

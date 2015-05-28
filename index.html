@@ -9,29 +9,31 @@
 
 </head>
 <body>
-  <p>Temperature: <span id="Current_temp"></span></p>
-  <p> PSM Mode: <span id="Power_Saving_Mode"></span></p>
+  <header id="top" class="main-header">
+    <span class="title"> JavaScript, JQuery, Jasmine </span>
+    <h1> Thermostat </h1>
+  </header>
 
-  <div>
-    <input type="button" id="incTemp" value="Increase Temp"/>
-    <input type="button" id="decTemp" value="Decrease Temp"/>
-    <input type="button" id="resetTemp" value="Reset Temp">
-    <input type="button" id = "Power_Saving_Mode_On" value="PSMode ON">
-    <input type="button" id= "Power_Saving_Mode_Off" value="PSMode Off">
+  <div class="main-content">
+    <p>Temperature in Degrees: <span id="Current_temp"> </span></p>
+    <p> Power Saving Mode: <span id="Power_Saving_Mode"> </span></p>
+
+  <div class="buttons"> <br>
+    <input type="button" id="incTemp" value="Increase Temp"/><br>
+    <input type="button" id="decTemp" value="Decrease Temp"/><br>
+    <input type="button" id="resetTemp" value="Reset Temp"><br>
+    <input type="button" id = "Power_Saving_Mode_On" value="PSMode ON"><br>
+    <input type="button" id= "Power_Saving_Mode_Off" value="PSMode Off"><br>
   </div>
 
 
   <script src="src/thermostat.js"></script>
   <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="src/thermostatDisplay.js">
-    // $(document).ready(function() {
-    //   var thermostat = new Thermostat();
-    //   $('span#Current_temp').text(thermostat.temp());
-    //   $('#incButton').onclick(function(){
+  <script src="src/thermostatDisplay.js"></script>
 
-    //   });
-    // })
-  </script>
+  <footer id="main-footer">
+    Footer goes here Footer goes here Footer goes here Footer goes here Footer goes here
+  </footer>
 
 </body>
 </html>
