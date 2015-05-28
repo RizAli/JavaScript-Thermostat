@@ -1,7 +1,7 @@
 $(document).ready(function() {
   var thermostat = new Thermostat();
   $('span#Current_temp').text(thermostat.temp());
-  $('span#Power_Saving_Mode').text(thermostat.PSModeOn());
+  $('span#Power_Saving_Mode').text(thermostat.PSMode());
   // $('span#Power_Saving_Mode').text(thermostat.PSModeOn());
 
   $('#incTemp').click(function() {
@@ -15,14 +15,18 @@ $(document).ready(function() {
   });
 
   $('#Power_Saving_Mode_On').click(function(){
-    var i = thermostat.PSModeOn();
-    console.log(i);
+    thermostat.PSModeOn();
+    $('span#Power_Saving_Mode').text(thermostat.PSModeOn());
   });
 
   $('#Power_Saving_Mode_Off').click(function(){
-    var j = thermostat.PSModeOff();
-    console.log(j);
+    thermostat.PSModeOff();
+    $('span#Power_Saving_Mode').text(thermostat.PSModeOff());
   });
 
+  $('#resetTemp').click(function(){
+    thermostat.resetTemp();
+    $('span#Current_temp').text(thermostat.temp());
+  });
 
 });

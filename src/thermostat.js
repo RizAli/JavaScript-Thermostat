@@ -1,10 +1,14 @@
 var Thermostat = function(){
   this.temperature = 20;
-  this.PSMode = true;
+  this.PSMode_default = true;
 };
 
 Thermostat.prototype.temp = function() {
   return this.temperature;
+};
+
+Thermostat.prototype.PSMode = function() {
+  return this.PSMode_default;
 };
 
 Thermostat.prototype.increaseTemp = function() {
@@ -29,9 +33,14 @@ Thermostat.prototype.PSModeOff = function() {
   return this.PSMode = false;
 }
 
-function reset(){
-  // resets the temp to 20
+Thermostat.prototype.resetTemp = function() {
+  return this.temperature = 20;
 }
+
+
+// function reset(){
+//   // resets the temp to 20
+// }
 
 function print(){
   temp;
