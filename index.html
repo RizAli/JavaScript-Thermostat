@@ -10,13 +10,14 @@
 </head>
 <body>
   <p>Temperature: <span id="Current_temp"></span></p>
+  <p> PSM Mode: <span id="Power_Saving_Mode"></span></p>
 
   <div>
     <input type="button" id="incTemp" value="Increase Temp"/>
     <input type="button" id="decTemp" value="Decrease Temp"/>
     <input type="button" onclick="resetTemp()" value="Reset Temp">
-    <input type="button" onclick="PSModeOn()" value="PSMode ON">
-    <input type="button" onclick="PSModeOff()" value="PSMode Off">
+    <input type="button" id = "Power_Saving_Mode_On" value="PSMode ON">
+    <input type="button" id= "Power_Saving_Mode_Off" value="PSMode Off">
   </div>
 
 
