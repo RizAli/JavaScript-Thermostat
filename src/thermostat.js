@@ -1,6 +1,8 @@
 var Thermostat = function(){
   this.temperature = 20;
   this.PSMode_default = true;
+  this.maxTemp = 25;
+  this.minTemp = 10;
 };
 
 Thermostat.prototype.temp = function() {
@@ -12,14 +14,19 @@ Thermostat.prototype.PSMode = function() {
 };
 
 Thermostat.prototype.increaseTemp = function() {
+    // if the PSModeOn maxtemp can be 25 degrees
+  // if the PSMModeOff maxtemp can be 32 degree
   return this.temperature +=1;
 };
 
 Thermostat.prototype.decreaseTemp = function() {
-  return this.temperature -=1;
-  //   can decrease up to 10 degrees
-  // if the PSModeOn maxtemp can be 25 degrees
-  // if the PSMModeOff maxtemp can be 32 degree
+ //   can decrease up to 10 degrees
+    if (this.temperature < 10) {
+      alert("Sorry the minimum temperature is: " + this.minTemp + " degrees");
+      return this.temperature = 10;
+    } else {
+      return this.temperature -= 1;
+    }
 };
 
 Thermostat.prototype.PSModeOn = function() {
