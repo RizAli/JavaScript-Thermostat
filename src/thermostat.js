@@ -1,6 +1,6 @@
 var Thermostat = function(){
   this.temperature = 20;
-  this.PSMode_default = true;
+  this.CurrentPSMode = true;
   this.maxTemp = 25;
   this.minTemp = 10;
 };
@@ -10,13 +10,24 @@ Thermostat.prototype.temp = function() {
 };
 
 Thermostat.prototype.PSMode = function() {
-  return this.PSMode_default;
+  return this.CurrentPSMode;
 };
 
 Thermostat.prototype.increaseTemp = function() {
     // if the PSModeOn maxtemp can be 25 degrees
   // if the PSMModeOff maxtemp can be 32 degree
-  return this.temperature +=1;
+  if (this.temperature > 25 && this.CurrentPSMode === true) {
+    alert("on max temp is 25");
+    return this.temperature = 25;
+  } else if (this.temperature > 32 && this.CurrentPSMode === false) {
+    alert("off max temp is 32");
+    return this.temperature = 32;
+  } else {
+    return this.temperature +=1;
+  }
+
+
+
 };
 
 Thermostat.prototype.decreaseTemp = function() {
@@ -30,14 +41,14 @@ Thermostat.prototype.decreaseTemp = function() {
 };
 
 Thermostat.prototype.PSModeOn = function() {
-  return this.PSMode = true;
+  return this.CurrentPSMode = true;
   // PSM mode is ON by default
   // On and OFF
 }
 
 
 Thermostat.prototype.PSModeOff = function() {
-  return this.PSMode = false;
+  return this.CurrentPSMode = false;
 }
 
 Thermostat.prototype.resetTemp = function() {
