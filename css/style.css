@@ -20,6 +20,13 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+
+/*body {
+  color: #878787;
+  margin: 0;
+  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}*/
+
 .main-content {
   text-transform: uppercase;
   text-align: center;
@@ -42,6 +49,7 @@ h1{
 .main-header {
   border-bottom: 1px solid lightgrey;
   width: 100%;
+  text-align: center;
 }
 
 
@@ -61,6 +69,11 @@ h1{
   padding-top: 60px;
   padding-bottom: 60px;
   border-bottom: solid 10px orange;
+}
+
+.arrow {
+  width: 50px;
+  text-align: center;
 }
 
 
