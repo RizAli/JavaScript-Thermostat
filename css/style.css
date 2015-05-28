@@ -47,15 +47,14 @@ h1{
   border-bottom: 1px solid lightgrey;
   width: 100%;
   text-align: center;
-  background-color: orange;
   padding-top: 170px;
-  height: 850px;
-  background-image: url('../img/mountains.jpg');
+  height: 350px;
+  background: linear-gradient(#ffa949, transparent 90%),
+              linear-gradient(0deg, #fff, transparent),
+               #ffa949 url('../img/mountains.jpg') no-repeat center;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position:  center;
-}
 
+}
 
 .title{
   font-size: ..9em;
@@ -70,8 +69,8 @@ h1{
 }
 
 #main-footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
+/*  padding-top: 60px;
+  padding-bottom: 60px;*/
   border-bottom: solid 10px orange;
 }
 
