@@ -1,6 +1,6 @@
 # JavaScript-Thermostat
 
-
+![Thermostat](https://raw.githubusercontent.com/RizAli/JavaScript-Thermostat/master/img/Thermostat%20JasmineScreenshot.png?raw=true "Thermostat unit testing")
 
 
 
